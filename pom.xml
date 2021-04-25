@@ -138,8 +138,37 @@
 	</dependency>
 	
 	</dependencies>
+    
 	<build>
 		<finalName>shopieasy</finalName>
+		<plugins>
+			<plugin>
+   <groupId>org.sonatype.plugins</groupId>
+   <artifactId>nexus-staging-maven-plugin</artifactId>
+   <version>1.5.1</version>
+   <executions>
+      <execution>
+         <id>default-deploy</id>
+         <phase>deploy</phase>
+         <goals>
+            <goal>deploy</goal>
+         </goals>
+      </execution>
+   </executions>
+   <configuration>
+      <serverId>nexus</serverId>
+      <nexusUrl>http://54.179.165.175:9000/repository/sample</nexusUrl>
+      <skipStaging>true</skipStaging>
+   </configuration>
+</plugin>
+			</plugins>
 	</build>
 	<artifactId>shopieasy</artifactId>
+	<distributionManagement>
+    <repository>
+    <id>nexus</id>
+    <name>releases</name>
+    <url>http://54.179.165.175:9000/repository/sample/</url>
+  </repository>
+  </distributionManagement>
 </project>
