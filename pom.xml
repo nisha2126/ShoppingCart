@@ -157,7 +157,7 @@
    </executions>
    <configuration>
       <serverId>nexus</serverId>
-      <nexusUrl>http://54.179.165.175:9000/repository/sample</nexusUrl>
+      <nexusUrl>http://54.179.165.175:9000/repository/shopping</nexusUrl>
       <skipStaging>true</skipStaging>
    </configuration>
 </plugin>
@@ -168,7 +168,7 @@
     <repository>
     <id>nexus</id>
     <name>releases</name>
-    <url>http://54.179.165.175:9000/repository/sample/</url>
+    <url>http://54.179.165.175:9000/repository/shopping/</url>
   </repository>
   </distributionManagement>
 </project>
